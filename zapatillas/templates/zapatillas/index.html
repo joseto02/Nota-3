@@ -1,11 +1,178 @@
+
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zapatillas San Antonio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'zapatillas/css/style.css'%}">
 </head>
 <body>
-    <h1>Easy django</h1>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container-fluid ">
+            <!--logo-->
+            <a class="navbar-brand" href="#">
+                <img src="{%static 'zapatillas/img/logo.png'%}" alt="imagen logo" width="100" height="50">
+            </a>
+            <!-- Fin del logo-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="{% url 'index' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Hombre</a></li>
+                            <li><a class="dropdown-item" href="#">Mujer</a></li>
+                            <li><a class="dropdown-item" href="#">Niños</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Catalogo</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-outline-light">Iniciar sesion</a>
+                <a href="#" id="signupForm" class="btn btn-outline-light">Registrarse</a>
+                <button id="logout" href="index.html" class="btn btn-outline-light">Cerrar sesión</button>
+            </div>
+        </div>
+    </nav>
+    <!-- NOMBRE DE LA EMPRESA -->
+    <div class="eslogan">
+        <h1>Zapatillas San Antonio</h1>
+    </div>
+
+    <!-- AQUI EMPIEZA EL CAROUSEL -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="adidas.html">
+                    <img src="{% static 'zapatillas/img/adidas1.jpg' %}" class="d-block w-100" alt="carouse1">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="nike.html">
+                    <img src="{% static 'zapatillas/img/nike1.png' %}" class="d-block w-100" alt="carouse2">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="puma.html">
+                    <img src="{% static 'zapatillas/img/puma.jpg' %}" class="d-block w-100" alt="carouse3">
+                </a>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+
+    <div class="pord-dest">
+        <h2>Productos destacados</h2>
+    </div>
+    <!-- SECCION PRODUCTOS DESTACADOS -->
+    <section>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="card mx-auto">
+                    <img src="https://nikeclprod.vtexassets.com/arquivos/ids/723350-1200-1200?v=638241048470070000&width=1200&height=1200&aspect=true"
+                        class="card-img-top" alt="card1">
+                    <div class="card-body">
+                        <h5 class="card-title">Nike Air Force 1 07</h5>
+                        <p class="card-text">Diseñada originalmente para el básquetbol, la amortiguación Nike Air agrega
+                            comodidad ligera durante todo el día.</p>
+                        <!-- <a href="#" class="btn btn-primary">Agregar al carrito</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="card mx-auto">
+                    <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e2f8f7e1c3c94815a2cbdea28b6255d6_9366/Zapatillas_Samba_OG_Negro_IE3438_01_standard.jpg"
+                        class="card-img-top" alt="card2">
+                    <div class="card-body">
+                        <h5 class="card-title">Adidas VL Court 3.0</h5>
+                        <p class="card-text">Zapatilla modelo femenino casual inspiradas en el skateboarding.</p>
+                        <!-- <a href="#" class="btn btn-primary">Agregar al carrito</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="card mx-auto">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/391962/10/sv01/fnd/CHL/w/640/h/640/fmt/png"
+                        class="card-img-top" alt="card3">
+                    <div class="card-body">
+                        <h5 class="card-title">Puma Suede Classic XXI</h5>
+                        <p class="card-text">Un empeine completo de gamuza y toques modernos, que mejoran la calidad
+                            general.</p>
+                        <!-- <a href="#" class="btn btn-primary">Agregar al carrito</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <!--PIE DE PAGINA (INFORMACION Y CONTACTO)-->
+    <footer class="fooc">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h3>Enlaces</h3>
+                    <ul> 
+                        <li><a class="txtfo" href="{% url 'index' %}">Inicio</a></li>
+                        <button id="btn-abrir-modal">Contacto</button>
+                        
+                        <!-- Modal -->
+                        <div id="modal" class="modal">
+                            <div class="modal-content">
+                                <span id="btn-cerrar-modal" class="close">&times;</span>
+                                <h2>Contacto</h2>
+                                <form method="dialog">
+                                    <label>Nombre <input type="text"></label>
+                                    <p></p>
+                                    <label>Correo <input type="email"></label>
+                                    <button type="submit">Enviar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Contacto</h3>
+                    <p>Correo electronico: zapatillas@sanantonio.cl</p>
+                    <p>Telefono: 933445566</p>
+                </div>
+                <div class="col">
+                    <h3>Derechos de autor</h3>
+                    <p>Copyright ©℗®™ 2024 Sitio Web <br> Jose Gonzales <br> Juan Rebolledo <br>Benjamin Torres</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+    <!-- <script type="module" src="./assets/js/index.js"></script> -->
 </body>
 </html>
